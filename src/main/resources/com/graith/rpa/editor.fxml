@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="753.0" prefWidth="1124.0" spacing="20.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.graith.rpa.EditorController">
+    <children>
+      <AnchorPane prefHeight="731.0" prefWidth="857.0">
+         <children>
+            <VBox layoutY="40.0" prefHeight="673.0" prefWidth="221.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TreeTableView fx:id="tableView" prefHeight="676.0" prefWidth="221.0" />
+               </children>
+            </VBox>
+            <TabPane fx:id="programTabPane" layoutX="157.0" layoutY="40.0" prefHeight="673.0" prefWidth="706.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="583.0" prefWidth="706.0" />
+                  </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <ToolBar prefHeight="40.0" prefWidth="1084.0">
+              <items>
+                    <Button fx:id="titleButton" onAction="#switchToTitle" text="Title" />
+                  <Button fx:id="executeButton" onAction="#execute" text="Run" />
+                  <Button fx:id="newProgramButton" onAction="#createNewProgram" text="New" />
+                  <Button fx:id="openProgramButton" onAction="#openProgram" text="Open" />
+              </items>
+            </ToolBar>
+            <VBox layoutY="40.0" prefHeight="673.0" prefWidth="158.0">
+               <children>
+                  <Accordion prefHeight="76.0" prefWidth="158.0">
+                    <panes>
+                      <TitledPane fx:id="actionPane" animated="false" text="Action">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="161.0" />
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="criterionPane" animated="false" text="Criterion">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="routinePane" animated="false" text="ActionList">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
